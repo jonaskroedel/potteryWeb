@@ -1,0 +1,308 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 60%;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, .05);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, .3);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#header-image {
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+#header-image:hover {
+    transform: scale(1.1);
+}
+
+#Header-Text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Header-Text a {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 0 2rem;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+#Header-Text a:hover {
+    color: #007aff;
+}
+
+#hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;  /* Increase the width */
+    height: 2rem;  /* Increase the height */
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+#hamburger-menu div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #fff;
+}
+
+#nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    color: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+#nav-menu.hide {
+    transform: translateY(-100%);
+}
+
+#nav-menu a {
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#close-menu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #000;
+}
+
+#main {
+    height: 100vh;
+    background: url("../assets/wallpaper1.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 130px;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007aff;
+    transition: background-color .3s;
+}
+
+button:hover {
+    background-color: #0051a8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5rem;
+    line-height: 1.5;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+#samples {
+    background: url("../assets/wallpaper2.jpg") center/cover no-repeat;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sample-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#samples a {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+#samples a:hover {
+    color: #007aff;
+}
+
+#samples img {
+    width: 25rem;
+    height: 25rem;
+    box-shadow: black 0px 0px 10px;
+    transition: 0.3s ease;
+    border-radius: 2vh;
+}
+
+#samples img:hover {
+    transform: scale(1.05);
+    box-shadow: black 0 0 20px;
+
+}
+
+.footer {
+    background-color: #333; /* Dark grey background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Default font */
+    text-align: center;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    padding: 0 20px; /* Add some padding to the sides of the footer */
+}
+
+.copyright {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.socials {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    display: flex;
+    gap: 20px; /* Add some space between the social icons */
+}
+
+.socials a {
+    color: #fff; /* White icon color */
+    font-size: 24px; /* Icon size */
+    margin-left: 10px; /* Space between icons */
+}
+
+.socials a:hover {
+    color: #ddd; /* Lighter grey on hover */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-extra {
+    margin-top: 20px;
+    font-size: 0.9em; /* Slightly smaller font for additional text */
+}
+
+.heart {
+    color: #fff; /* White heart color */
+    font-style: normal; /* Ensures heart symbol is not italicized */
+}
+
+/* Impressum */
+#impressum-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #333;
+}
+
+#impressum-container h1 {
+    font-size: 2.5rem;
+    color: #007aff;
+    margin-bottom: 20px;
+}
+
+#impressum-container p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+    #samples {
+        grid-template-columns: 1fr 1fr;
+        height: 200vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    #Header-Text {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: flex;
+    }
+
+    #samples {
+        grid-template-columns: 1fr;
+        height: 300vh;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav {
+        margin-bottom: 10px;
+    }
+
+    .socials {
+        margin-bottom: 10px;
+    }
+}

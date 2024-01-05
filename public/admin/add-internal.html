@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Items</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Ensure this path is correct -->
+</head>
+<body>
+
+<div id="loadingIndicator" class="loading-indicator"></div>
+
+<div class="admin-container">
+    <button id="addProductButton">Add Product</button>
+    <div id="productGrid" class="product-grid">
+        <!-- Product items will be added here dynamically -->
+    </div>
+</div>
+
+<!-- Pop-up Form for Adding Product -->
+<div id="addProductModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="addProductForm">
+            <div class="form-group">
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" name="name" required>
+            </div>
+            <div class="form-group currency-input">
+                <label for="productPrice">Price:</label>
+                <input type="number" id="productPrice" name="price" required>
+                <span class="currency-symbol">€</span>
+            </div>
+            <div class="form-group">
+                <label for="productColor">Color:</label>
+                <input type="text" id="productColor" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Picture:</label>
+                <input type="file" id="productImage" name="image" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Description:</label>
+                <textarea id="productDescription" name="description" required></textarea>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+
+<script src="scripts/addProducts.js"></script>
+</body>
+</html>
